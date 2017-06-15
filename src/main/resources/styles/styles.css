@@ -1,0 +1,106 @@
+/* Application wide styles */
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 0, 0, 0, 1);
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+.button:hover {
+    -fx-base: #395bae;
+}
+
+/* Component specific styles */
+
+.main-panel {
+    -fx-background-image: url("../images/background.jpg");
+}
+
+.hello-message {
+    -fx-text-fill: #AA0000;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 0, 0, 0, 1);
+}
+
+#task .column-header-background {
+    visibility: hidden;
+    -fx-padding: -1em;
+}
+
+/* Стили цвета для сравнения месяцев  */
+.default-color0.chart-bar { -fx-bar-fill: #7b86ff; }
+.default-color1.chart-bar { -fx-bar-fill: #ff584a; }
+
+/* стили отображения ячеек в зависимости от оценок */
+
+.score0 {
+
+}
+.score1{
+    -fx-background-color: rgb(255, 128, 128);
+}
+
+.score2{
+    -fx-background-color: rgb(255, 170, 128);
+}
+
+.score3 {
+    -fx-background-color: rgb(255, 213, 128);
+}
+
+.score4 {
+    -fx-background-color: rgb(255, 255, 128);
+}
+
+.score5 {
+    -fx-background-color: rgb(213, 255, 128);
+}
+
+.score6 {
+    -fx-background-color: rgb(170, 255, 128);
+}
+
+.score7 {
+    -fx-background-color: rgb(128, 255, 128);
+}
+
+.score8 {
+    -fx-background-color: rgb(128, 255, 170);
+}
+
+.score9 {
+    -fx-background-color: rgb(87, 255, 110);
+}
+/* стили отображения типов периода */
+#life {
+     -fx-background-color: rgb(1, 164, 0);
+}
+
+#year10 {
+    -fx-background-color: rgb(153, 176, 255);
+}
+
+#year5 {
+    -fx-background-color: rgb(147, 208, 255);
+}
+
+#year {
+    -fx-background-color: rgb(145, 243, 255);
+}
+
+#month {
+    -fx-background-color: rgb(237, 255, 172);
+}
+
+#done_task .text{
+    -fx-strikethrough: true;
+}

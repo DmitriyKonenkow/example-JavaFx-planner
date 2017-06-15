@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress JpaConfigDomFacetInspection -->
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    <persistence-unit name="plannerDB" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>ru.spb.konenkov.entity.Task</class>
+        <class>ru.spb.konenkov.entity.Period</class>
+        <class>ru.spb.konenkov.entity.Sphere</class>
+        <class>ru.spb.konenkov.entity.Unit</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:C:\Users\konenkow\IdeaProjects\plnr\db\repository"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="openjpa.jdbc.SchemaFactory" value="native(ForeignKeys=true)"/>
+
+            <property name="hibernate.generate_statistics" value="true"/>
+            <property name="hibernate.cache.use_structured_entries" value="true"/>
+            <!--<property name="hibernate.ejb.interceptor.session_scoped" value="spb.iac.core.audit.AuditLogInterceptor"/>-->
+            <!-- Properties for Hibernate -->
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.type" value="TRACE, stdout"/>
+            <!-- TRACE -->
+            <property name="hibernate.SQL" value="TRACE, stdout"/>
+            <!-- DEBUG -->
+            <!-- <property name="hibernate.use_sql_comments" value="true" /> -->
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.66"
+          fx:controller="ru.spb.konenkov.controller.AllPeriodsController">
+    <HBox spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS">
+        <children>
+            <Label text="С"/>
+            <DatePicker fx:id="periodFrom" maxWidth="120.0" minWidth="100.0" prefWidth="120.0"
+                        onAction="#renderDataOnAllPeriodsTab"/>
+            <Label text="по"/>
+            <DatePicker fx:id="periodTo" maxWidth="120.0" minWidth="100.0" prefWidth="120.0"
+                        onAction="#renderDataOnAllPeriodsTab"/>
+            <Separator orientation="VERTICAL"/>
+            <CheckBox fx:id="weekCheckBox" mnemonicParsing="false" selected="true" text="Недели"
+                      onAction="#renderDataOnAllPeriodsTab"/>
+            <CheckBox fx:id="monthCheckBox" mnemonicParsing="false" selected="true" text="Месяцы"
+                      onAction="#renderDataOnAllPeriodsTab"/>
+            <CheckBox fx:id="yearCheckBox" mnemonicParsing="false" selected="true" text="Годы"
+                      onAction="#renderDataOnAllPeriodsTab"/>
+            <CheckBox fx:id="year5CheckBox" mnemonicParsing="false" selected="true" text="5 лет"
+                      onAction="#renderDataOnAllPeriodsTab"/>
+            <CheckBox fx:id="year10CheckBox" mnemonicParsing="false" selected="true" text="10 лет"
+                      onAction="#renderDataOnAllPeriodsTab"/>
+            <CheckBox fx:id="lifeCheckBox" mnemonicParsing="false" selected="true" text="Жизнь"
+                      onAction="#renderDataOnAllPeriodsTab"/>
+            <Separator orientation="VERTICAL"/>
+        </children>
+        <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="5.0"/>
+        </padding>
+    </HBox>
+    <TableView fx:id="periodTable" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS"/>
+</GridPane>
